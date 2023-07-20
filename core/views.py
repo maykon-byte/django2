@@ -1,3 +1,13 @@
 from django.shortcuts import render
 
-# Create your views here.
+def index(request):
+    return(request,'index.html')
+
+
+def contato(request):
+    return(request,'contato.html')
+
+
+def produto(request):
+    return(request,'produto.html')
+
