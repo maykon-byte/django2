@@ -68,11 +68,11 @@ WSGI_APPLICATION = 'django2.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'django2',
-        'USER': 'root',
-        'PASSWORD': '1991',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'NAME':'django2',
+        'USER':'root',
+        'PASSWORD':'#mayk1991',
+        'HOST':'localhost',
+        'PORT':'3306',
     }
 }
 

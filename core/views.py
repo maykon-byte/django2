@@ -1,13 +1,13 @@
 from django.shortcuts import render
 
 def index(request):
-    return(request,'index.html')
+    return render(request,'index.html')
 
 
 def contato(request):
-    return(request,'contato.html')
+    return render(request,'contato.html')
 
 
 def produto(request):
-    return(request,'produto.html')
+    return render(request,'produto.html')
 
