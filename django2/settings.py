@@ -114,7 +114,17 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
+#configuração de email
+EMAIL_BACKEND='django.core.mail.backends.console.Emailbackend'
+
+#quando tiver servidor email
+"""EMAIL_HOST='localhost'
+EMAIL_HOST_USER='no-reply@seudominio.com.br'
+PORT=587
+EMAIL_USER_TSL=true
+EMAIL_HOST_PASSWORD='sua senha'"""
+
+
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
