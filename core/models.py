@@ -9,7 +9,7 @@ class base(models.Model):
     criado=models.DateField('data de criação',auto_now_add=True)
     modificado=models.DateField("data de atualização", auto_now=True)
     ativo=models.BooleanField('ativo?',default=True)
-
+    
     class meta:
         abstract=True
 
@@ -18,6 +18,7 @@ class produto(base):
     preço=models.DecimalField('preço',max_digits=5, decimal_places=2)
     estoque=models.IntegerField('estoque')
     imagem=StdImageField('imagem',upload_to='produtos',variations={'thumb':(124,124)})
+    slug=models.SlugField('slug',max_length=100,blank=True,editable=False)
 
     def __str__(self):
         return self.nome

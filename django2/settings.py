@@ -67,12 +67,13 @@ WSGI_APPLICATION = 'django2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME':'django2',
-        'USER':'root',
-        'PASSWORD':'#mayk1991',
-        'HOST':'localhost',
-        'PORT':'3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'NAME':'django2',
+        # 'USER':'root',
+        # 'PASSWORD':'#mayk1991',
+        # 'HOST':'localhost',
+        # 'PORT':'3306',
     }
 }
 
@@ -115,7 +116,11 @@ STATIC_URL = 'static/'
 STATIC_ROOT=os.path.join(BASE_DIR,'staticfiles')
 
 #configuração de email
-EMAIL_BACKEND='django.core.mail.backends.console.Emailbackend'
+if DEBUG:
+    EMAIL_BACKEND='django.core.mail.backends.console.Emailbackend'
+else:
+    EMAIL_BACKEND='django.core.mail.backends.smtp.Emailbackend'
+
 
 #quando tiver servidor email
 """EMAIL_HOST='localhost'
